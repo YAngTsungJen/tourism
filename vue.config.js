@@ -1,3 +1,7 @@
+// vue.config.js file to be place in the root of your repository
+
 module.exports = {
-  publicPath: '/tourism/dist'
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/tourism/dist/'
+    : '/'
 }
